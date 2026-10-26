@@ -1,1 +1,2 @@
 Step 3: bigger window = smoother but more lag (w=3 fast/noisy, w=51 smooth/slow)
+Step 4: EMA alpha=0.05 smooth/slow, 0.5 fast/noisy. alpha 0.2 behaves like moving average w~11. Same noise-vs-lag tradeoff.
