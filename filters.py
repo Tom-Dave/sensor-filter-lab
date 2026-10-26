@@ -16,3 +16,10 @@ def ema(x, alpha=0.2):
         else:
             out[i] = alpha * x[i] + (1 - alpha) * out[i - 1]
     return out
+
+def median_filter(x, w=11):
+    out = np.empty(len(x))
+    for i in range(len(x)):
+        start = max(0, i - w + 1)
+        out[i] = np.nanmedian(x[start:i + 1])
+    return out
