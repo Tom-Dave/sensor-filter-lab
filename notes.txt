@@ -1,3 +1,4 @@
 Step 3: bigger window = smoother but more lag (w=3 fast/noisy, w=51 smooth/slow)
 Step 4: EMA alpha=0.05 smooth/slow, 0.5 fast/noisy. alpha 0.2 behaves like moving average w~11. Same noise-vs-lag tradeoff.
 Step 5: median ignores spikes; moving average shows a bump per spike lasting ~w samples.
+Step 6: Kalman small q = smooth/slow (like EMA alpha~sqrt(q/r)), large q = fast/noisy. r=4 because noise variance is sigma^2=4.
