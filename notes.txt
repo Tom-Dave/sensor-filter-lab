@@ -1,0 +1,1 @@
+Step 3: bigger window = smoother but more lag (w=3 fast/noisy, w=51 smooth/slow)
