@@ -1,5 +1,38 @@
 condition,filter,RMSE,lag
-noise only (sigma=2),Moving average (w=11),1.288,10
-noise only (sigma=2),EMA (alpha=0.2),1.07,11
-noise only (sigma=2),Median (w=11),1.459,6
-noise only (sigma=2),"Kalman (q=0.01, r=4)",2.094,49
+noise only (sigma=2),Moving average (w=11),1.288,10.0
+noise only (sigma=2),EMA (alpha=0.2),1.07,11.0
+noise only (sigma=2),Median (w=11),1.459,6.0
+noise only (sigma=2),"Kalman (q=0.01, r=4)",2.094,49.0
+noise sigma=0.5,Moving average (w=11),1.195,9.0
+noise sigma=0.5,EMA (alpha=0.2),0.9,10.0
+noise sigma=0.5,Median (w=11),1.452,5.0
+noise sigma=0.5,"Kalman (q=0.01, r=4)",2.072,46.0
+noise sigma=0.5,"Kalman (q=0.01, r=sigma^2)",0.962,11.0
+noise sigma=1,Moving average (w=11),1.211,9.0
+noise sigma=1,EMA (alpha=0.2),0.934,11.0
+noise sigma=1,Median (w=11),1.429,5.0
+noise sigma=1,"Kalman (q=0.01, r=4)",2.077,46.0
+noise sigma=1,"Kalman (q=0.01, r=sigma^2)",1.439,23.0
+noise sigma=2,Moving average (w=11),1.288,10.0
+noise sigma=2,EMA (alpha=0.2),1.07,11.0
+noise sigma=2,Median (w=11),1.459,6.0
+noise sigma=2,"Kalman (q=0.01, r=4)",2.094,49.0
+noise sigma=2,"Kalman (q=0.01, r=sigma^2)",2.094,49.0
+noise sigma=4,Moving average (w=11),1.586,10.0
+noise sigma=4,EMA (alpha=0.2),1.516,26.0
+noise sigma=4,Median (w=11),1.784,6.0
+noise sigma=4,"Kalman (q=0.01, r=4)",2.15,50.0
+noise sigma=4,"Kalman (q=0.01, r=sigma^2)",2.993,87.0
+noise sigma=8,Moving average (w=11),2.474,94.0
+noise sigma=8,EMA (alpha=0.2),2.65,31.0
+noise sigma=8,Median (w=11),2.924,
+noise sigma=8,"Kalman (q=0.01, r=4)",2.344,57.0
+noise sigma=8,"Kalman (q=0.01, r=sigma^2)",4.259,199.0
+"spikes (2%, size 20)",Moving average (w=11),1.523,17.0
+"spikes (2%, size 20)",EMA (alpha=0.2),1.406,14.0
+"spikes (2%, size 20)",Median (w=11),1.47,7.0
+"spikes (2%, size 20)","Kalman (q=0.01, r=4)",2.227,50.0
+10% dropouts,Moving average (w=11),1.305,10.0
+10% dropouts,EMA (alpha=0.2),1.063,12.0
+10% dropouts,Median (w=11),1.467,6.0
+10% dropouts,"Kalman (q=0.01, r=4)",2.15,50.0

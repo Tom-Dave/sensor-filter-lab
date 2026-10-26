@@ -4,3 +4,4 @@ Step 5: median ignores spikes; moving average shows a bump per spike lasting ~w 
 Step 6: Kalman small q = smooth/slow (like EMA alpha~sqrt(q/r)), large q = fast/noisy. r=4 because noise variance is sigma^2=4.
 Step 7-8: RMSE and lag measured. Lowest RMSE = <fill in>, shortest lag = <fill in>. Slow filters can lose on RMSE because catch-up error after the step counts.
 Step 9: all 4 filters compared on one plot and table. Lowest RMSE = <fill in>, shortest lag = <fill in>.
+Step 10: noise - which filter degrades least? <fill in>. spikes - best = <fill in>, worst = <fill in>. dropouts - effect on RMSE = <fill in>. Kalman with r=sigma^2 vs r=4: <fill in>.
