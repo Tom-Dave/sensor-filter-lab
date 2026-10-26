@@ -5,3 +5,4 @@ Step 6: Kalman small q = smooth/slow (like EMA alpha~sqrt(q/r)), large q = fast/
 Step 7-8: RMSE and lag measured. Lowest RMSE = <fill in>, shortest lag = <fill in>. Slow filters can lose on RMSE because catch-up error after the step counts.
 Step 9: all 4 filters compared on one plot and table. Lowest RMSE = <fill in>, shortest lag = <fill in>.
 Step 10: noise - which filter degrades least? <fill in>. spikes - best = <fill in>, worst = <fill in>. dropouts - effect on RMSE = <fill in>. Kalman with r=sigma^2 vs r=4: <fill in>.
+Step 11: Kalman q sweep. Best tradeoff q = <fill in>, because <fill in>. Ratio check (q=0.01,r=4 vs q=0.1,r=40): outputs nearly identical, so only q/r matters.
