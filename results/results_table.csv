@@ -1,0 +1,5 @@
+condition,filter,RMSE,lag
+noise only (sigma=2),Moving average (w=11),1.288,10
+noise only (sigma=2),EMA (alpha=0.2),1.07,11
+noise only (sigma=2),Median (w=11),1.459,6
+noise only (sigma=2),"Kalman (q=0.01, r=4)",2.094,49
