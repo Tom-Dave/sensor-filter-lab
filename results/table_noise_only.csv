@@ -1,0 +1,7 @@
+filter,RMSE,lag
+Raw sensor (no filter),1.918,
+Moving average (w=11),1.288,10.0
+EMA (alpha=0.2),1.07,11.0
+Median (w=11),1.459,6.0
+"Kalman (q=0.01, r=4)",2.094,49.0
+"Kalman (q=0.1, r=4)",1.199,15.0
