@@ -44,11 +44,11 @@ Lag is the number of samples the filter needs to settle after the step. "did not
 
 ## Findings
 
-FINDING 1: which filter had the lowest RMSE, and which had the shortest lag? Were they the same one?
-FINDING 2: which filter handled spikes best, and why?
-FINDING 3: what did missing samples do to the results, and why?
-FINDING 4: what happened to the Kalman filter as q grew, and which q did you choose and why?
-FINDING 5: did the phone data show the same noise-versus-lag pattern?
+- **Finding 1:** On the noise-only test (sigma=2), the EMA (alpha=0.2) had the lowest RMSE (1.07) and the Median (w=11) had the shortest lag (6 samples). No single filter won on both measures. A smoother filter averages over more past readings, so it removes more noise but takes longer to follow the step.
+- **Finding 2:** With 2% spikes, the EMA (alpha=0.2) had the lowest RMSE (1.406) and the Kalman (q=0.01, r=4) the highest (2.227, up from 2.094 without spikes). Averaging filters (moving average, EMA, Kalman) are pulled toward each spike, while a median takes the middle value of its window and cannot be moved by one extreme reading.
+- **Finding 3:** With 10% of samples missing, RMSE changed by at most 0.056 across the filters (largest change: Kalman (q=0.01, r=4), from 2.094 to 2.15). Each filter skips a missing reading and carries on from its previous estimate, or averages only the readings it has, so a gap costs very little.
+- **Finding 4:** As q grew from 0.0001 to 10.0, the Kalman filter's RMSE went from 6.185 to 1.555 and its lag went from did not settle to 32 samples. A larger q tells the filter the true value changes a lot, so it trusts each new reading more: faster, but noisier. I chose q=1.0, the lowest RMSE (1.089) among the settings that settled (lag 4 samples).
+- **Finding 5:** The phone accelerometer recording has no ground truth, so noise was measured as the standard deviation on a flat stretch. The raw sensor had a noise std of 0.0076; the quietest filter was Moving average (w=11) at 0.0027, and it settled in 1.6 s compared with 1.3 s for the raw signal. Less noise came with slower settling, the same tradeoff as in the simulation.
 
 ## Limitations
 
